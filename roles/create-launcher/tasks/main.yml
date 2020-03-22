@@ -1,0 +1,16 @@
+---
+-   name: Create new launch configuration
+    ec2_lc:
+        region: "{{ aws_region }}"
+        name: "suite-{{ lookup('pipe', 'date +%Y%m%d%H%M%S') }}"
+        image_id: "{{ ami.image_id }}"
+        instance_type: "{{ aws_instance_type }}"
+        security_groups: "{{ aws_security_groups }}"
+        key_name: "{{ aws_keypair }}"
+        instance_monitoring: yes
+        volumes:
+            -   device_name: /dev/xvda
+                device_type: gp2
+                volume_size: 10
+                delete_on_termination: true
+    register: lc_result

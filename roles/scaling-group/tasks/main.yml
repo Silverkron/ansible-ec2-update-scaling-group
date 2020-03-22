@@ -1,0 +1,15 @@
+---
+-   name: Update Auto Scaling Group and start to rolling instances
+    ec2_asg:
+        name: "{{ aws_asg_name }}"
+        launch_config_name: "{{ lc_result.name }}"
+        health_check_type: EC2
+        health_check_period: 300
+        replace_all_instances: yes
+        min_size: 1
+        max_size: 2
+        desired_capacity: 1
+        region: "{{ aws_region }}"
+        state: present
+        wait_for_instances: no
+    register: asg_result

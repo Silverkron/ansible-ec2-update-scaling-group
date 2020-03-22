@@ -1,0 +1,9 @@
+---
+-   name: Create new AMI
+    ec2_ami:
+        region: "{{ aws_region }}"
+        instance_id: "{{ aws_ec2_id }}"
+        name: "suite-{{ lookup('pipe', 'date +%Y%m%d%H%M%S') }}"
+        wait: yes
+        state: present
+    register: ami
