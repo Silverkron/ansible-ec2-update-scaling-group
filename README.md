@@ -14,7 +14,7 @@ I will show you in this repository how to deploy on production environment start
 
 * Install [Python](https://www.python.org/downloads/)
 * Install [pip](https://pip.pypa.io/en/stable/installing/) 
-# Install [Ansible](https://www.ansible.com/) with `sudo apt-get install ansible` or `brew install ansible`
+* Install [Ansible](https://www.ansible.com/) with `sudo apt-get install ansible` or `brew install ansible`
 * Install [AWS Cli](https://aws.amazon.com/it/cli/) with `pip install awscli`
 * Install [Boto](https://github.com/boto/boto) with `pip install python-boto` (Ansible uses Boto to interact with AWS)
 
