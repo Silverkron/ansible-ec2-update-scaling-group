@@ -1,6 +1,6 @@
 # How to update your Scaling Group on AWS
 
-I use Ansible to deploy my applications on AWS. It's perfect to move my code on an EC2 instance with zero downtime and I just completed this configuration to update all instances on my scaling group.
+I use Ansible to deploy my applications on AWS. It's perfect to move my code on an EC2 instance with zero downtime but complicatand I just completed this configuration to update all instances on my scaling group.
 So, my normal workflow is:
 
 - deploy my tested software on the staging environment (an EC2 instance)
@@ -36,7 +36,6 @@ So, you should edit `group_vars/all/aws_parameters.yaml`.
 
 Now we are ready to start your first deploy 🚀🚀🚀. Use:
 ```bash
-[default]
 ansible-playbook deploy.yml
 ```
 
